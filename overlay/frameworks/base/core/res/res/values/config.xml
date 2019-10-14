@@ -367,4 +367,7 @@
     <!-- Controls whether system buttons use all caps for text -->
     <bool name="config_buttonTextAllCaps">false</bool>
 
+    <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
+    <bool name="config_zramWriteback">true</bool>
+
 </resources>
