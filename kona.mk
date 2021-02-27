@@ -157,7 +157,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.bluetooth.a2dp_offload.supported=true \
     ro.vendor.bluetooth.wipower=false \
     vendor.qcom.bluetooth.soc=hastings \
-    persist.vendor.bt.a2dp.aac_whitelist=false
+    persist.vendor.bt.a2dp.aac_whitelist=false \
+    persist.vendor.btstack.enable.twsplus=true
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.bluetooth.library_name=libbluetooth_qti.so
