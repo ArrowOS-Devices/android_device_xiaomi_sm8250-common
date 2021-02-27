@@ -159,7 +159,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.qcom.bluetooth.soc=hastings \
     persist.vendor.bt.a2dp.aac_whitelist=false \
     persist.vendor.btstack.enable.twsplus=true \
-    persist.vendor.btstack.enable.lpa=true
+    persist.vendor.btstack.enable.lpa=true \
+    persist.vendor.bt.a2dp.hal.implementation=true
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.bluetooth.library_name=libbluetooth_qti.so
