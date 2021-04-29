@@ -132,6 +132,7 @@ vendor.qcom.bluetooth.soc=hastings
 # Camera
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
 persist.vendor.camera.perflock.enable=0
+persist.vendor.camera.logInfoMask=false
 
 # Chipset
 ro.soc.manufacturer=Qualcomm
