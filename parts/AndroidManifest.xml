@@ -52,7 +52,6 @@
             android:name=".doze.DozeSettingsActivity"
             android:label="@string/ambient_display_title">
             <intent-filter>
-                <action android:name="org.lineageos.settings.device.DOZE_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
