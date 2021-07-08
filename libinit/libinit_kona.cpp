@@ -30,9 +30,9 @@ void set_variant_props(const variant_info_t variant) {
     set_ro_build_prop("marketname", variant.marketname, true);
     set_ro_build_prop("model", variant.model, true);
 
-    set_ro_build_prop("fingerprint", variant.build_fingerprint);
-    property_override("ro.bootimage.build.fingerprint", variant.build_fingerprint.c_str());
-    property_override("ro.build.description", variant.build_description.c_str());
+    set_ro_build_prop("fingerprint", "google/redfin/redfin:11/RQ3A.210705.001/7380771:user/release-keys");
+    property_override("ro.bootimage.build.fingerprint", "google/redfin/redfin:11/RQ3A.210705.001/7380771:user/release-keys");
+    property_override("ro.build.description", "redfin-user 11 RQ3A.210705.001 7380771 release-key");
 }
 
 void property_override(char const prop[], char const value[], bool add) {
