@@ -160,6 +160,10 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
 
+# Device Personalization Services
+PRODUCT_PACKAGES += \
+    MatchmakerPrebuilt
+
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
