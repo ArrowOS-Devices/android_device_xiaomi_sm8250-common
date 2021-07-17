@@ -192,6 +192,9 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
 
+# Dalvik
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
+
 # Device Personalization Services
 PRODUCT_PACKAGES += \
     MatchmakerPrebuilt
