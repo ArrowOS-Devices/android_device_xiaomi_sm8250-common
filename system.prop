@@ -9,6 +9,12 @@ camera.disable_zsl_mode=true
 # Charger
 ro.charger.disable_init_blank=true
 
+# Dalvik
+pm.dexopt.install=speed-profile
+pm.dexopt.bg-dexopt=speed-profile
+pm.dexopt.boot=verify
+pm.dexopt.first-boot=quicken
+
 # Display
 debug.gralloc.gfx_ubwc_disable=0
 debug.sf.enable_hwc_vds=1
