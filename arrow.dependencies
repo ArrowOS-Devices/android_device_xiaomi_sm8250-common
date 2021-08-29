@@ -10,5 +10,9 @@
   { 
     "repository": "android_vendor_xiaomi_apollo",
     "target_path": "vendor/xiaomi"
+  },
+  {
+    "repository": "android_prebuilts_clang_host_linux-x86_clang-r428724",
+    "target_path": "prebuilts/clang/host/linux-x86/clang-r428724"
   }
 ]
