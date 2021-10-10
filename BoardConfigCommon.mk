@@ -86,6 +86,7 @@ TARGET_USES_ION := true
 ifeq ($(TARGET_HAS_FOD),true)
 TARGET_USES_FOD_ZPOS := true
 endif
+TARGET_USES_VULKAN := true
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
