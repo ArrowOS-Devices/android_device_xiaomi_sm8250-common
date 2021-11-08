@@ -63,6 +63,7 @@ BiometricsFingerprint *BiometricsFingerprint::sInstance = nullptr;
 
 #define TOUCH_FOD_ENABLE 10
 
+#ifdef FOD
 static bool readBool(int fd) {
     char c;
     int rc;
@@ -81,6 +82,7 @@ static bool readBool(int fd) {
 
     return c != '0';
 }
+#endif
 
 BiometricsFingerprint::BiometricsFingerprint() :
         mClientCallback(nullptr), mUdfpsSensorCallback(nullptr), mDevice(nullptr) {
@@ -95,6 +97,7 @@ BiometricsFingerprint::BiometricsFingerprint() :
             break;
         }
     }
+#ifdef FOD
     mFod = GetBoolProperty("vendor.lineage.fod.enable", false);
 
     if (mFod) {
@@ -123,6 +126,7 @@ BiometricsFingerprint::BiometricsFingerprint() :
         }).detach();
     }
     mTouchFeatureService = ITouchFeature::getService();
+#endif
 }
 
 BiometricsFingerprint::~BiometricsFingerprint() {
