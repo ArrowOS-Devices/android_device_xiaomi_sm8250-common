@@ -118,6 +118,11 @@ endif
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
 
+# Task profiles
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/task_profiles/cgroups_31.json:$(TARGET_COPY_OUT_SYSTEM)/etc/task_profiles/cgroups_31.json \
+    $(LOCAL_PATH)/task_profiles/task_profiles_31.json:$(TARGET_COPY_OUT_SYSTEM)/etc/task_profiles/task_profiles_31.json
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl:32 \
