@@ -207,6 +207,10 @@ on property:persist.vendor.sys.fp.fod.large_field=1
 on boot && property:persist.vendor.usb.controller.default=*
     setprop vendor.usb.controller ${persist.vendor.usb.controller.default}
 
+on property:sys.boot_completed=1
+    # Enable ZRAM on boot_complete
+    swapon_all /vendor/etc/fstab.qcom
+
 on charger
     mkdir /mnt/vendor/persist
     chown root system /mnt/vendor/persist
