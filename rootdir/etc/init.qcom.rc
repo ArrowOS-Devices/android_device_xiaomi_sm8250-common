@@ -241,6 +241,8 @@ on boot
     enable vendor.dataqti
     enable vendor.dataadpl
 
+    setprop init.svc.console stopped
+
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
