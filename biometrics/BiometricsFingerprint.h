@@ -24,6 +24,7 @@
 #include <hidl/MQDescriptor.h>
 #include <hidl/Status.h>
 #include <android/hardware/biometrics/fingerprint/2.3/IBiometricsFingerprint.h>
+#include <vendor/lineage/biometrics/fingerprint/udfpssensor/1.0/IUdfpsSensor.h>
 #include <vendor/xiaomi/hardware/fingerprintextension/1.0/IXiaomiFingerprint.h>
 
 namespace android {
@@ -43,9 +44,12 @@ using ::android::hardware::Void;
 using ::android::hardware::hidl_vec;
 using ::android::hardware::hidl_string;
 using ::android::sp;
+using ::vendor::lineage::biometrics::fingerprint::udfpssensor::V1_0::IUdfpsSensor;
+using ::vendor::lineage::biometrics::fingerprint::udfpssensor::V1_0::IUdfpsSensorCallback;
 using ::vendor::xiaomi::hardware::fingerprintextension::V1_0::IXiaomiFingerprint;
 
-struct BiometricsFingerprint : public IBiometricsFingerprint, public IXiaomiFingerprint {
+struct BiometricsFingerprint :
+        public IBiometricsFingerprint, public IXiaomiFingerprint, public IUdfpsSensor {
 public:
     BiometricsFingerprint();
     ~BiometricsFingerprint();
@@ -53,6 +57,7 @@ public:
     // Method to wrap legacy HAL with BiometricsFingerprint class
     static IBiometricsFingerprint* getInstance();
     static IXiaomiFingerprint* getXiaomiInstance();
+    static IUdfpsSensor* getUdfpsSensorInstance();
 
     // Methods from ::android::hardware::biometrics::fingerprint::V2_1::IBiometricsFingerprint follow.
     Return<uint64_t> setNotify(const sp<IBiometricsFingerprintClientCallback>& clientCallback) override;
@@ -74,6 +79,9 @@ public:
     // Methods from ::vendor::xiaomi::hardware::fingerprintextension::V1_0::IXiaomiFingerprint follow.
     Return<int32_t> extCmd(int32_t cmd, int32_t param) override;
 
+    // Methods from ::vendor::lineage::hardware::biometrics::fingerprint::udfpssensor::V1_0::IUdfpsSensor follow.
+    Return<void> setCallback(const sp<IUdfpsSensorCallback>& callback) override;
+
 private:
     static xiaomi_fingerprint_device_t* openHal(const char *class_name);
     static void notify(const fingerprint_msg_t *msg); /* Static callback for legacy HAL implementation */
@@ -84,6 +92,8 @@ private:
 
     std::mutex mClientCallbackMutex;
     sp<IBiometricsFingerprintClientCallback> mClientCallback;
+    std::mutex mUdfpsSensorCallbackMutex;
+    sp<IUdfpsSensorCallback> mUdfpsSensorCallback;
     xiaomi_fingerprint_device_t *mDevice;
     bool mFod;
 };
