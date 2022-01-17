@@ -26,6 +26,7 @@
 #include <android/hardware/biometrics/fingerprint/2.3/IBiometricsFingerprint.h>
 #include <vendor/lineage/biometrics/fingerprint/udfpssensor/1.0/IUdfpsSensor.h>
 #include <vendor/xiaomi/hardware/fingerprintextension/1.0/IXiaomiFingerprint.h>
+#include <vendor/xiaomi/hardware/touchfeature/1.0/ITouchFeature.h>
 
 namespace android {
 namespace hardware {
@@ -47,6 +48,7 @@ using ::android::sp;
 using ::vendor::lineage::biometrics::fingerprint::udfpssensor::V1_0::IUdfpsSensor;
 using ::vendor::lineage::biometrics::fingerprint::udfpssensor::V1_0::IUdfpsSensorCallback;
 using ::vendor::xiaomi::hardware::fingerprintextension::V1_0::IXiaomiFingerprint;
+using ::vendor::xiaomi::hardware::touchfeature::V1_0::ITouchFeature;
 
 struct BiometricsFingerprint :
         public IBiometricsFingerprint, public IXiaomiFingerprint, public IUdfpsSensor {
@@ -96,6 +98,7 @@ private:
     sp<IUdfpsSensorCallback> mUdfpsSensorCallback;
     xiaomi_fingerprint_device_t *mDevice;
     bool mFod;
+    sp<ITouchFeature> mTouchFeatureService;
 };
 
 }  // namespace implementation
