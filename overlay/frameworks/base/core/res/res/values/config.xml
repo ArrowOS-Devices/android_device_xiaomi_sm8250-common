@@ -361,4 +361,6 @@
          from DOZE to ON, in millis. -->
     <integer name="config_wakeUpDelayDoze">32</integer>
 
+    <!-- Whether the display blanks itself when transition from a doze to a non-doze state -->
+    <bool name="config_displayBlanksAfterDoze">false</bool>
 </resources>
