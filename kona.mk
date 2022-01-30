@@ -317,6 +317,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-service.xiaomi
 
+# LibXML2
+PRODUCT_PACKAGES += \
+    libxml2 \
+    libxml2.vendor
+
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail \
