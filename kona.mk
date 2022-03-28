@@ -156,6 +156,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
+PRODUCT_PACKAGES += \
+    GCamGOPrebuilt-V2
+
 # Configstore
 PRODUCT_PACKAGES += \
     disable_configstore
