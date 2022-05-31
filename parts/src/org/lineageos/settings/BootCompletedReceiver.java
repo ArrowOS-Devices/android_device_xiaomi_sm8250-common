@@ -37,7 +37,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     public void onReceive(final Context context, Intent intent) {
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
         DozeUtils.checkDozeService(context);
-        PopupCameraUtils.startService(context);
+        PopupCameraUtils.checkPopupCameraService(context);
         TouchSamplingUtils.restoreSamplingValue(context);
         ThermalUtils.startService(context);
     }
