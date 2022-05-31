@@ -143,6 +143,7 @@ persist.vendor.qcom.bluetooth.soc=hastings
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=hastings
+persist.vendor.btstack.enable.lpa=true
 
 # Camera
 persist.vendor.camera.perflock.enable=0
