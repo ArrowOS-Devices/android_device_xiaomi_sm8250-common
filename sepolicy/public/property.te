@@ -1,4 +1,2 @@
 # SettingsLib
 system_public_prop(settingslib_prop)
-
-vendor_public_prop(vendor_fp_prop);
