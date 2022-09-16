@@ -1,0 +1,2 @@
+#Dontaudit to disable logspam on netutils_wrapper capability
+dontaudit netutils_wrapper self:capability { sys_admin };
