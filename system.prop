@@ -4,6 +4,10 @@ camera.disable_zsl_mode=true
 # Charger
 ro.charger.disable_init_blank=true
 
+# Dalvik
+dalvik.vm.dex2oat64.enabled=true
+ro.sys.fw.dex2oat_thread_count=8
+
 # Display
 debug.gralloc.gfx_ubwc_disable=0
 debug.sf.enable_hwc_vds=0
