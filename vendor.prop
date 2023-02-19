@@ -259,6 +259,7 @@ persist.vendor.radio.cdma_cap=true
 persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.data_con_rprt=1
 persist.vendor.radio.data_ltd_sys_ind=1
+persist.vendor.radio.add_power_save=1
 persist.vendor.radio.dynamic_sar=1
 persist.vendor.radio.enable_temp_dds=true
 persist.vendor.radio.enableadvancedscan=true
