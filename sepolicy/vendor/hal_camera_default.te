@@ -15,6 +15,8 @@ allow hal_camera_default proc_stat:file read;
 
 set_prop(hal_camera_default, vendor_camera_prop)
 
+add_hwservice(hal_camera_default, hal_xiaomi_camera_hwservice)
+
 allow hal_camera_default socket_device:sock_file write;
 allow hal_camera_default proc_stat:file { open };
 

@@ -4,6 +4,7 @@ ro.config.media_vol_steps=25
 
 # Camera
 camera.disable_zsl_mode=true
+persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
 
 # Charger
