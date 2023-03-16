@@ -9,6 +9,13 @@ r_dir_file(system_app, vendor_sysfs_battery_supply)
 allow system_app sysfs_zram:dir search;
 allow system_app sysfs_zram:file r_file_perms;
 
+# Battery supply
+allow system_app sysfs_battery_supply:dir { search };
+allow system_app sysfs_battery_supply:file { getattr open read };
+
+r_dir_file(system_app, sysfs_battery_supply)
+r_dir_file(system_app, vendor_sysfs_battery_supply)
+
 # Miui Sepolicy for Vendor Audio Files
 allow system_app vendor_audio_data_file:dir {write add_name search};
 allow system_app vendor_audio_data_file:file {read write create getattr append open};
