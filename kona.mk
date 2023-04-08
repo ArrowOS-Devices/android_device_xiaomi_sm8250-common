@@ -166,7 +166,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
 PRODUCT_PACKAGES += \
-    GCamGOPrebuilt-V2
+    GCamGOPrebuilt-V3
 
 # Configstore
 PRODUCT_PACKAGES += \
