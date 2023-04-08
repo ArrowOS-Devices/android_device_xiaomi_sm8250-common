@@ -1,2 +1,0 @@
-allow devicesettings_app vendor_sysfs_graphics:file write;
-r_dir_file(devicesettings_app, vendor_sysfs_graphics)
