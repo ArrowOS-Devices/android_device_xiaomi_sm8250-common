@@ -26,8 +26,6 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
-    <protected-broadcast android:name="com.android.systemui.doze.pulse" />
-
     <application
         android:icon="@mipmap/ic_launcher"
         android:label="@string/device_settings_app_name"
@@ -43,11 +41,6 @@
             </intent-filter>
         </receiver>
 
-        <service android:name=".doze.DozeService"
-                 android:exported="true"
-                 android:permission="XiaomiDozeService">
-        </service>
-
         <service
             android:name=".popupcamera.PopupCameraService"
             android:exported="false"
@@ -59,15 +52,6 @@
             android:exported="true"
             android:permission="ThermalService">
         </service>
-
-        <activity
-            android:name=".doze.DozeSettingsActivity"
-            android:label="@string/ambient_display_title"
-            android:exported="true">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
 
         <activity
             android:name=".popupcamera.PopupCameraSettingsActivity"
