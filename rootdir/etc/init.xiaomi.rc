@@ -83,6 +83,13 @@ service vendor.btmac-sh /vendor/bin/init.mi.btmac.sh
     oneshot
     disabled
 
+# Ril
+service vendor.imsrcsservice /vendor/bin/imsrcsd
+    class main
+    user radio
+    group radio vendor_qti_diag log inet wakelock
+    disabled
+
 # Touch
 on boot
     chown system system /sys/devices/virtual/touch/touch_dev/bump_sample_rate
