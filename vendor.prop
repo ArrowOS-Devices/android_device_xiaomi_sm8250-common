@@ -289,6 +289,9 @@ sys.vendor.shutdown.waittime=500
 # Subsystem silent restart
 persist.vendor.ssr.restart_level=ALL_ENABLE
 
+# Telephony
+telephony.active_modems.max_count=2
+
 # Thermal
 vendor.sys.thermal.data.path=/data/vendor/thermal/
 
