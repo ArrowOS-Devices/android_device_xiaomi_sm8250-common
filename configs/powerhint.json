@@ -347,6 +347,15 @@
         "0,1,2,3,4,5,7"
       ],
       "Type": "Property"
+    },
+    {
+      "Name": "SchedBoost",
+      "Path": "/proc/sys/kernel/sched_boost",
+      "Values": [
+        "1",
+        "0"
+      ],
+      "ResetOnInit": true
     }
   ],
   "Actions": [
@@ -427,6 +436,12 @@
       "Node": "LLCCBWMinFreq",
       "Duration": 58,
       "Value": "2597"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "SchedBoost",
+      "Duration": 0,
+      "Value": "1"
     },
     {
       "PowerHint": "DEVICE_IDLE",
@@ -548,6 +563,13 @@
       "Duration": 0,
       "Value": "2"
     },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "SchedBoost",
+      "Duration": 3000,
+      "Value": "1"
+    },
+    {
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "PowerHALRenderingState",
       "Duration": 0,
