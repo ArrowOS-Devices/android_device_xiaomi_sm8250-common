@@ -184,13 +184,14 @@
     </carrier_config>
     <carrier_config mcc="214" mnc="06">
         <boolean name="carrier_volte_available_bool" value="true" />
-    </carrier_config>
+    </carrierconfig>
     <carrier_config mcc="214" mnc="07">
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
         <boolean name="editable_wfc_mode_bool" value="true" />
         <boolean name="carrier_wfc_supports_wifi_only_bool" value="true" />
         <boolean name="carrier_volte_provisioning_required_bool" value="false" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
     </carrier_config>
     <carrier_config mcc="214" mnc="09">
         <boolean name="carrier_volte_available_bool" value="true" />
