@@ -5703,7 +5703,7 @@
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
     </carrier_config>
     <!-- Do not allow 5G NSA on Jio -->
-    <carrier_config mcc="405" mnc="840,854,855,856,857,858,859,860,861,862,863,864,865,866,86>
+    <carrier_config mcc="405" mnc="840,854,855,856,857,858,859,860,861,862,863,864,865,866,86">
         <int-array name="carrier_nr_availabilities_int_array" num="1">
             <item value="2" />
         </int-array>
