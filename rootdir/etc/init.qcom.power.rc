@@ -159,3 +159,17 @@ on init
     # report max frequency to unity tasks.
     write /proc/sys/kernel/sched_lib_name "com.miHoYo.,UnityMain,libunity.so"
     write /proc/sys/kernel/sched_lib_mask_force 255
+
+on property:sys.boot_completed=1
+    # Enable UFS powersaving
+    write /sys/devices/platform/soc/${ro.boot.bootdevice}/clkgate_enable 1
+
+    #Enable Powersaving
+    write /sys/module/lpm_levels/parameters/sleep_disabled 0
+
+on charger
+    # Enable UFS powersaving
+    write /sys/devices/platform/soc/${ro.boot.bootdevice}/clkgate_enable 1
+
+    #Enable Powersaving
+    write /sys/module/lpm_levels/parameters/sleep_disabled 0
